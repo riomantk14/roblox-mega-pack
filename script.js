@@ -1,7 +1,7 @@
-// Content Locker URLs - UPDATED WITH YOUR LINKS
+// Content Locker URLs - UPDATED WITH MYLEAD LOCKER
 const CONTENT_LOCKER_URLS = {
-    premium: "https://shorturl.at/bbjjO",
-    basic: "https://shorturl.at/bbjjO"
+    premium: "https://bestlocker.eu/cpl/5aa3dde8-0a8e-11f1-864c-4e5c1971bddc",
+    basic: "https://bestlocker.eu/cpl/5aa3dde8-0a8e-11f1-864c-4e5c1971bddc"
 };
 
 // Download URLs - UPDATED WITH YOUR MEDIAFIRE LINK
@@ -57,7 +57,7 @@ function showDownloadLink(packType) {
             <button class="download-button" onclick="startDownload('${packType}')">
                 ⬇️ DOWNLOAD NEON CHARACTERS PACK
             </button>
-            <p class="small-note">Thank you for completing the task!</p>
+            <p class="small-note">Thank you for completing your task!</p>
         </div>
     `;
     document.querySelector('.buttons-container').insertAdjacentHTML('afterend', successHTML);
