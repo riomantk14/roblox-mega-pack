@@ -1,7 +1,7 @@
 // Content Locker URLs - UPDATED WITH MYLEAD LOCKER
 const CONTENT_LOCKER_URLS = {
-    premium: "https://bestlocker.eu/5aa3dde8-0a8e-11f1-864c-4e5c1971bddc",
-    basic: "https://bestlocker.eu/5aa3dde8-0a8e-11f1-864c-4e5c1971bddc"
+    premium: "https://bestlocker.eu/iframe/5aa3dde8-0a8e-11f1-864c-4e5c1971bddc",
+    basic: "https://bestlocker.eu/iframe/5aa3dde8-0a8e-11f1-864c-4e5c1971bddc"
 };
 
 
@@ -90,4 +90,5 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
 
