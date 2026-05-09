@@ -1,74 +1,482 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exclusive Roblox Pack - Free Download</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free Gaming PNG Sample Pack</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: #0f0f23;
+      color: white;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ==================
+       HERO SECTION
+    ================== */
+    .hero {
+      padding: 50px 20px 40px;
+      background: linear-gradient(135deg, #1a1a3a, #0f0f23);
+    }
+
+    .main-image {
+      width: 100%;
+      max-width: 320px;
+      border-radius: 15px;
+      margin-bottom: 25px;
+      border: 3px solid #00ffff;
+      box-shadow: 0 5px 20px rgba(0,255,255,0.3);
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 12px;
+      font-weight: 900;
+    }
+
+    h1 span {
+      color: #00ffff;
+      text-shadow: 0 0 15px #00ffff;
+    }
+
+    .hero-sub {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+      opacity: 0.9;
+      line-height: 1.5;
+    }
+
+    /* ==================
+       BUTTONS
+    ================== */
+    .btn-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      margin: 25px 0;
+    }
+
+    .btn {
+      display: inline-block;
+      width: 100%;
+      max-width: 360px;
+      padding: 18px 30px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-radius: 35px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      text-align: center;
+      color: white;
+      transition: all 0.3s ease;
+    }
+
+    .btn-free {
+      background: linear-gradient(45deg, #ff00ff, #00ffff);
+      box-shadow: 0 6px 20px rgba(255,0,255,0.4);
+    }
+
+    .btn-free:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(255,0,255,0.6);
+    }
+
+    .btn-small {
+      background: linear-gradient(45deg, #ff9900, #ffcc00);
+      box-shadow: 0 6px 20px rgba(255,153,0,0.4);
+      font-size: 1rem;
+      padding: 14px 25px;
+    }
+
+    .btn-small:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(255,153,0,0.6);
+    }
+
+    .btn-big {
+      background: linear-gradient(45deg, #00ff88, #00ccff);
+      box-shadow: 0 6px 20px rgba(0,255,136,0.4);
+      font-size: 1rem;
+      padding: 14px 25px;
+    }
+
+    .btn-big:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(0,255,136,0.6);
+    }
+
+    .note {
+      color: #aaaaaa;
+      font-size: 0.9rem;
+      margin-top: 10px;
+    }
+
+    /* ==================
+       DIVIDER
+    ================== */
+    .divider {
+      width: 80%;
+      max-width: 400px;
+      height: 1px;
+      background: rgba(255,255,255,0.15);
+      margin: 15px auto;
+    }
+
+    .or-text {
+      color: #888888;
+      font-size: 0.85rem;
+      margin: 8px 0;
+    }
+
+    /* ==================
+       PREVIEW SECTION
+    ================== */
+    .previews {
+      padding: 50px 20px;
+      background: #1a1a2e;
+    }
+
+    .previews h2 {
+      font-size: 1.6rem;
+      margin-bottom: 25px;
+      color: #00ffff;
+    }
+
+    .preview-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .preview-item {
+      transition: transform 0.3s ease;
+      padding: 10px;
+    }
+
+    .preview-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .preview-item img {
+      width: 100%;
+      max-width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 2px solid #00ffff;
+      box-shadow: 0 4px 12px rgba(0,255,255,0.2);
+    }
+
+    .preview-item h3 {
+      font-size: 1rem;
+      margin-top: 10px;
+      color: #00ffff;
+    }
+
+    /* ==================
+       STEPS SECTION
+    ================== */
+    .steps {
+      padding: 50px 20px;
+      background: #0f0f23;
+    }
+
+    .steps h2 {
+      font-size: 1.6rem;
+      margin-bottom: 25px;
+      color: #00ffff;
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .step {
+      background: rgba(255,255,255,0.08);
+      padding: 20px 15px;
+      border-radius: 12px;
+      font-size: 1rem;
+      border: 1px solid rgba(0,255,255,0.2);
+    }
+
+    /* ==================
+       OFFERS SECTION
+    ================== */
+    .offers {
+      padding: 50px 20px;
+      background: #1a1a2e;
+    }
+
+    .offers h2 {
+      font-size: 1.6rem;
+      margin-bottom: 25px;
+      color: #ffd700;
+    }
+
+    .offers-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .offer-card {
+      background: rgba(255,255,255,0.06);
+      border: 2px solid rgba(255,255,255,0.12);
+      border-radius: 16px;
+      padding: 25px 18px;
+      transition: transform 0.3s ease;
+    }
+
+    .offer-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .offer-card h3 {
+      font-size: 1.1rem;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+
+    .offer-card .price {
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: #ffd700;
+      margin-bottom: 10px;
+    }
+
+    .offer-card p {
+      font-size: 0.9rem;
+      color: #cccccc;
+      margin-bottom: 16px;
+      line-height: 1.5;
+    }
+
+    /* ==================
+       FOOTER
+    ================== */
+    .footer {
+      padding: 30px 20px;
+      background: #0a0a1a;
+      font-size: 0.8rem;
+      color: #666666;
+    }
+
+    /* ==================
+       MOBILE
+    ================== */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 1.7rem;
+      }
+
+      .hero-sub {
+        font-size: 1rem;
+      }
+
+      .preview-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+
+      .steps-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .offers-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .btn {
+        max-width: 300px;
+        font-size: 1.1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .main-image {
+        max-width: 260px;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      .btn {
+        padding: 16px 25px;
+        font-size: 1rem;
+        max-width: 280px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <!-- Main Header - بدون features -->
-    <section class="hero">
-        <div class="container">
-            <img src="images/1.png" alt="Exclusive Roblox Pack" class="main-image">
-            <h1>🎁 Get Exclusive <span>Roblox Assets Pack</span></h1>
-            <p>50+ High Quality Images - Stickers, Characters, Neon Designs</p>
-            
-            <!-- تم حذف قسم features بالكامل -->
 
-            <!-- الزر الأول فقط في الهيدر -->
-            <div class="buttons-container">
-                <button class="cta-button primary" onclick="unlockContent('premium')">
-                    🔓 Get Premium Pack - FREE
-                </button>
-            </div>
+  <!-- ==================
+       HERO SECTION
+  ================== -->
+  <section class="hero">
+    <div class="container">
+      <img src="images/1.png"
+      alt="Free Gaming PNG Sample Pack"
+      class="main-image">
 
-            <div class="note">
-                ⏰ Limited Time: Only 24 Hours Left
-            </div>
+      <h1>🎁 Get Your
+      <span>Free Gaming PNG Pack</span></h1>
+
+      <p class="hero-sub">
+      Unlock 37 high-quality PNG images
+      including characters, stickers,
+      and neon styles.
+      </p>
+
+      <div class="btn-container">
+        <a href="https://ridefiles.net/1857333"
+        class="btn btn-free">
+        🔓 Unlock Free Sample
+        </a>
+
+        <p class="note">
+        Complete one quick step
+        to access your free pack.
+        </p>
+
+        <div class="divider"></div>
+        <p class="or-text">
+        Or get instant access
+        without waiting:
+        </p>
+
+        <a href="https://payhip.com/b/n3vrq"
+        class="btn btn-small">
+        ⚡ Get 9-Page PDF Pack — $1.97
+        </a>
+
+        <a href="https://payhip.com/b/ljeJX"
+        class="btn btn-big">
+        🎯 Get Full 200+ PNG Bundle — $9.97
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================
+       PREVIEW SECTION
+  ================== -->
+  <section class="previews">
+    <div class="container">
+      <h2>📸 What's Inside</h2>
+
+      <div class="preview-grid">
+        <div class="preview-item">
+          <img src="images/2.png"
+          alt="Gaming Stickers">
+          <h3>Gaming Stickers</h3>
         </div>
-    </section>
 
-    <!-- Preview Section -->
-    <section class="previews">
-        <div class="container">
-            <h2>📸 What's Inside Your Pack</h2>
-            <div class="preview-grid">
-                <div class="preview-item">
-                    <img src="images/2.png" alt="Roblox Stickers">
-                    <h3>Premium Stickers</h3>
-                </div>
-                <div class="preview-item">
-                    <img src="images/3.png" alt="Roblox Characters">
-                    <h3>HD Characters</h3>
-                </div>
-                <div class="preview-item">
-                    <img src="images/4.png" alt="Roblox Neon Designs">
-                    <h3>Neon Designs</h3>
-                </div>
-            </div>
-            
-            <!-- الزر الثاني هنا - تحت الصور الثلاثة -->
-            <div class="secondary-button-container">
-                <button class="cta-button secondary" onclick="unlockContent('basic')">
-                    ⭐ Get Basic Pack - FREE
-                </button>
-            </div>
+        <div class="preview-item">
+          <img src="images/3.png"
+          alt="Character Designs">
+          <h3>Character Designs</h3>
         </div>
-    </section>
 
-    <!-- How It Works -->
-    <section class="steps">
-        <div class="container">
-            <h2>🚀 How To Get Your Pack</h2>
-            <div class="steps-grid">
-                <div class="step">1. Click The Button Above</div>
-                <div class="step">2. Complete Quick Task</div>
-                <div class="step">3. Download Instantly</div>
-            </div>
+        <div class="preview-item">
+          <img src="images/4.png"
+          alt="Neon Styles">
+          <h3>Neon Styles</h3>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <script src="script.js"></script>
+  <!-- ==================
+       HOW IT WORKS
+  ================== -->
+  <section class="steps">
+    <div class="container">
+      <h2>🚀 How It Works</h2>
+
+      <div class="steps-grid">
+        <div class="step">
+        1. Click the unlock button
+        </div>
+        <div class="step">
+        2. Complete one quick step
+        </div>
+        <div class="step">
+        3. Access your free pack
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================
+       PAID OFFERS
+  ================== -->
+  <section class="offers">
+    <div class="container">
+      <h2>⭐ Want More? Get Instant Access</h2>
+
+      <div class="offers-grid">
+        <div class="offer-card">
+          <h3>9-Page Printable PDF</h3>
+          <div class="price">$1.97</div>
+          <p>Ready-to-print sticker sheets.
+          No design needed.
+          Just print and use.</p>
+          <a href="https://payhip.com/b/n3vrq"
+          class="btn btn-small"
+          style="width:100%; max-width:100%;">
+          Get PDF Pack
+          </a>
+        </div>
+
+        <div class="offer-card">
+          <h3>Full 200+ PNG Bundle</h3>
+          <div class="price">$9.97</div>
+          <p>200+ PNG characters
+          + 15-page creative guide.
+          Use for any project.</p>
+          <a href="https://payhip.com/b/ljeJX"
+          class="btn btn-big"
+          style="width:100%; max-width:100%;">
+          Get Full Bundle
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================
+       FOOTER
+  ================== -->
+  <div class="footer">
+    <p>Digital product.
+    Instant download.
+    No physical shipping.</p>
+  </div>
+
 </body>
 </html>
