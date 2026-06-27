@@ -1,221 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>US Roblox Giveaway 🎮</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Free Roblox Giveaway – US Players Only</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Inter:wght@400;600;700&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:#060612;color:#fff;text-align:center;overflow-x:hidden}
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(180deg, #0f172a, #1e293b);
-      color: white;
-      padding: 20px;
-    }
+/* HERO */
+.hero{padding:50px 20px 40px;background:linear-gradient(160deg,#0d0d2b 0%,#1a0533 50%,#0d0d2b 100%);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(ellipse at center,rgba(120,0,255,0.15) 0%,transparent 60%);pointer-events:none}
 
-    .container {
-      max-width: 700px;
-      margin: 0 auto;
-      background: #111827;
-      border-radius: 22px;
-      padding: 28px 22px;
-      box-shadow: 0 15px 40px rgba(0,0,0,0.35);
-    }
+/* BADGE */
+.badge{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(90deg,#ff0055,#ff4488);color:#fff;padding:8px 22px;border-radius:50px;font-size:0.85rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:25px;box-shadow:0 4px 20px rgba(255,0,85,0.4)}
 
-    .badge {
-      display: inline-block;
-      background: #2563eb;
-      color: white;
-      padding: 8px 14px;
-      border-radius: 999px;
-      font-size: 13px;
-      font-weight: bold;
-      margin-bottom: 18px;
-    }
+/* TITLE */
+h1{font-family:'Orbitron',sans-serif;font-size:2.4rem;font-weight:900;line-height:1.2;margin-bottom:15px;background:linear-gradient(90deg,#fff 0%,#00ffff 50%,#ff00ff 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.sub{font-size:1.05rem;color:#c0c0e0;margin-bottom:10px;max-width:500px;margin-left:auto;margin-right:auto}
+.countdown{font-size:1.1rem;color:#ff4444;font-weight:700;margin:15px 0 30px;animation:pulse 1.5s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.6}}
 
-    h1 {
-      font-size: 34px;
-      margin: 0 0 12px;
-      line-height: 1.15;
-    }
+/* PRIZES */
+.prizes{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin:30px 0}
+.prize-card{background:linear-gradient(145deg,rgba(255,255,255,0.07),rgba(255,255,255,0.02));border:1.5px solid rgba(0,255,255,0.3);border-radius:20px;padding:22px 16px;width:160px;transition:transform 0.3s,box-shadow 0.3s;cursor:default}
+.prize-card:hover{transform:translateY(-6px);box-shadow:0 12px 30px rgba(0,255,255,0.2)}
+.prize-card img{width:80px;height:80px;object-fit:contain;margin-bottom:12px;border-radius:10px}
+.prize-card .place{font-size:0.75rem;color:#aaa;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}
+.prize-card .amount{font-family:'Orbitron',sans-serif;font-size:1.5rem;font-weight:900;color:#ffd700}
+.prize-card .label{font-size:0.8rem;color:#c0c0e0;margin-top:4px}
 
-    .subtitle {
-      color: #d1d5db;
-      font-size: 18px;
-      line-height: 1.7;
-      margin-bottom: 10px;
-    }
+/* FORM */
+.form-wrap{max-width:420px;margin:30px auto 0;padding:0 20px}
+.form-wrap input,.form-wrap select{width:100%;padding:15px 20px;border-radius:50px;border:1.5px solid rgba(0,255,255,0.3);background:rgba(255,255,255,0.05);color:#fff;font-size:1rem;font-family:'Inter',sans-serif;outline:none;margin-bottom:14px;transition:border 0.3s}
+.form-wrap input::placeholder{color:#666}
+.form-wrap input:focus,.form-wrap select:focus{border-color:#00ffff;box-shadow:0 0 12px rgba(0,255,255,0.2)}
+.form-wrap select{color:#666;appearance:none}
+.form-wrap select option{background:#1a1a3a;color:#fff}
+.btn-submit{width:100%;padding:17px;border-radius:50px;border:none;background:linear-gradient(90deg,#7b00ff,#00ccff);color:#fff;font-size:1.1rem;font-weight:700;font-family:'Orbitron',sans-serif;cursor:pointer;letter-spacing:1px;transition:transform 0.2s,box-shadow 0.2s;box-shadow:0 6px 25px rgba(123,0,255,0.4)}
+.btn-submit:hover{transform:translateY(-3px);box-shadow:0 10px 35px rgba(123,0,255,0.6)}
 
-    .timer {
-      margin: 18px 0 26px;
-      color: #fbbf24;
-      font-weight: bold;
-      font-size: 17px;
-    }
+/* RULES */
+.rules{padding:50px 20px;background:linear-gradient(180deg,#060612,#0d0d2b)}
+.rules h2{font-family:'Orbitron',sans-serif;font-size:1.4rem;color:#00ffff;margin-bottom:30px;letter-spacing:2px}
+.steps{display:flex;justify-content:center;flex-wrap:wrap;gap:16px;max-width:700px;margin:0 auto}
+.step{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:20px;width:150px;transition:transform 0.3s}
+.step:hover{transform:translateY(-4px)}
+.step .num{font-family:'Orbitron',sans-serif;font-size:1.8rem;color:#7b00ff;font-weight:900}
+.step p{font-size:0.85rem;color:#c0c0e0;margin-top:8px;line-height:1.4}
 
-    .prize-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 14px;
-      margin: 24px 0 28px;
-    }
+/* FOOTER */
+.footer{padding:25px 20px;background:#030309;font-size:0.75rem;color:#444;line-height:1.8}
 
-    .prize-card {
-      background: #1f2937;
-      border-radius: 16px;
-      padding: 20px 14px;
-      text-align: center;
-      border: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .prize-card .emoji {
-      font-size: 28px;
-      margin-bottom: 8px;
-    }
-
-    .prize-card h3 {
-      margin: 0;
-      font-size: 28px;
-      color: #fbbf24;
-    }
-
-    .prize-card p {
-      margin: 8px 0 0;
-      color: #e5e7eb;
-    }
-
-    form {
-      display: grid;
-      gap: 14px;
-      margin-top: 10px;
-    }
-
-    input, select {
-      width: 100%;
-      padding: 14px 14px;
-      border-radius: 12px;
-      border: none;
-      font-size: 16px;
-      background: #f9fafb;
-      color: #111827;
-    }
-
-    button {
-      background: linear-gradient(90deg, #22c55e, #16a34a);
-      color: white;
-      border: none;
-      padding: 15px 18px;
-      border-radius: 14px;
-      font-size: 17px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    .section-title {
-      margin-top: 28px;
-      margin-bottom: 12px;
-      font-size: 22px;
-      color: #93c5fd;
-    }
-
-    ul {
-      color: #e5e7eb;
-      line-height: 1.9;
-      padding-left: 22px;
-    }
-
-    .note {
-      margin-top: 24px;
-      font-size: 14px;
-      color: #9ca3af;
-      line-height: 1.7;
-    }
-
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 28px;
-      }
-
-      .subtitle {
-        font-size: 16px;
-      }
-
-      .container {
-        padding: 22px 16px;
-      }
-    }
-  </style>
+/* DIVIDER */
+.divider{width:60px;height:3px;background:linear-gradient(90deg,#7b00ff,#00ccff);margin:0 auto 30px;border-radius:10px}
+</style>
 </head>
 <body>
-  <div class="container">
-    <div class="badge">🇺🇸 US Players Only</div>
 
-    <h1>🎮 FREE Roblox Giveaway 🎁</h1>
+<section class="hero">
 
-    <p class="subtitle">
-      Multiple winners. Real gift cards. Zero cost to enter.
-    </p>
+  <!-- TITLE FIRST -->
+  <h1>🎮 FREE Roblox Giveaway 🎁</h1>
+  <p class="sub">Multiple winners &bull; Real gift cards &bull; Zero cost to enter</p>
 
-    <p class="subtitle">
-      Prize options include <strong>$5</strong>, <strong>$10</strong>, and <strong>$20</strong> Roblox gift cards.
-    </p>
+  <!-- BADGE BELOW TITLE -->
+  <div class="badge">🇺🇸 US Players Only</div>
 
-    <div class="timer">⏰ Ends in 48 hours – Enter now!</div>
+  <p class="countdown">⏰ Ends in 48 Hours &ndash; Enter Now!</p>
 
-    <div class="prize-grid">
-      <div class="prize-card">
-        <div class="emoji">🥇</div>
-        <h3>$20</h3>
-        <p>Roblox Gift Card</p>
-      </div>
-
-      <div class="prize-card">
-        <div class="emoji">🥈</div>
-        <h3>$10</h3>
-        <p>Roblox Gift Card</p>
-      </div>
-
-      <div class="prize-card">
-        <div class="emoji">🥉</div>
-        <h3>$5</h3>
-        <p>Roblox Gift Card</p>
-      </div>
+  <!-- PRIZES -->
+  <div class="prizes">
+    <div class="prize-card">
+      <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/Roblox_gift_card.png/200px-Roblox_gift_card.png" alt="Roblox $20 Gift Card" onerror="this.style.display='none'">
+      <div class="place">1st Place</div>
+      <div class="amount">$20</div>
+      <div class="label">Roblox Gift Card</div>
     </div>
-
-    <form>
-      <input type="text" placeholder="Your Name" aria-label="Your Name" required />
-      <input type="email" placeholder="Your Email (US only)" aria-label="Your Email (US only)" required />
-      <input type="text" placeholder="Your Roblox Username" aria-label="Your Roblox Username" required />
-
-      <select name="prize_choice" aria-label="Preferred Prize" required>
-        <option value="">Preferred Prize</option>
-        <option value="$5">$5 Roblox Gift Card</option>
-        <option value="$10">$10 Roblox Gift Card</option>
-        <option value="$20">$20 Roblox Gift Card</option>
-      </select>
-
-      <button type="submit">🎯 Enter the Giveaway</button>
-    </form>
-
-    <h2 class="section-title">📋 How to Enter</h2>
-    <ul>
-      <li>1️⃣ Follow our Instagram account</li>
-      <li>2️⃣ Like the giveaway post</li>
-      <li>3️⃣ Comment READY + tag 1 friend</li>
-      <li>4️⃣ Fill the form above ✅</li>
-    </ul>
-
-    <p class="note">
-      This giveaway is not sponsored, endorsed, or administered by Roblox or Instagram.
-    </p>
-
-    <p class="note">
-      US participants only. Winners announced within 48 hours via Instagram Stories.
-    </p>
+    <div class="prize-card">
+      <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/Roblox_gift_card.png/200px-Roblox_gift_card.png" alt="Roblox $10 Gift Card" onerror="this.style.display='none'">
+      <div class="place">2nd Place</div>
+      <div class="amount">$10</div>
+      <div class="label">Roblox Gift Card</div>
+    </div>
+    <div class="prize-card">
+      <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/Roblox_gift_card.png/200px-Roblox_gift_card.png" alt="Roblox $5 Gift Card" onerror="this.style.display='none'">
+      <div class="place">3rd Place</div>
+      <div class="amount">$5</div>
+      <div class="label">Roblox Gift Card</div>
+    </div>
   </div>
+
+  <!-- FORM -->
+  <div class="form-wrap">
+    <form id="giveawayForm">
+      <input type="text" placeholder="Your Full Name" required/>
+      <input type="email" placeholder="Your Email Address (US only)" required/>
+      <input type="text" placeholder="Your Roblox Username" required/>
+      <button type="submit" class="btn-submit">ENTER THE GIVEAWAY</button>
+    </form>
+  </div>
+
+</section>
+
+<!-- HOW TO ENTER -->
+<section class="rules">
+  <h2>HOW TO ENTER</h2>
+  <div class="divider"></div>
+  <div class="steps">
+    <div class="step"><div class="num">1</div><p>Follow our Instagram account</p></div>
+    <div class="step"><div class="num">2</div><p>Like the giveaway post</p></div>
+    <div class="step"><div class="num">3</div><p>Comment "READY" and tag 1 friend</p></div>
+    <div class="step"><div class="num">4</div><p>Fill the form above and submit</p></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<div class="footer">
+  <p>This giveaway is not sponsored, endorsed, or administered by Roblox Corporation or Instagram.</p>
+  <p>Open to US residents only. Winners will be announced within 48 hours via Instagram Stories.</p>
+</div>
+
+<script>
+document.getElementById('giveawayForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  this.innerHTML='<div style="padding:30px"><p style="font-family:Orbitron,sans-serif;font-size:1.3rem;color:#00ffff">✅ You are entered!</p><p style="margin-top:12px;color:#aaa">Good luck! Winners announced in 48 hours on Instagram.</p></div>';
+});
+</script>
+
 </body>
 </html>
